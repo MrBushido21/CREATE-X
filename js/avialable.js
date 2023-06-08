@@ -61,3 +61,25 @@ window.addEventListener('click', function(evt) {
     document.body.classList.remove('_lock');
   }
 });
+//================================================================================================================================================
+//-----------------TEXT---------------\
+const label = document.querySelector('.form-label');
+const form = document.querySelector('.form__form');
+
+label.addEventListener('click', function() {
+  if (!label.classList.contains('active')) {
+    label.classList.add('active');
+  } else {
+    label.classList.remove('active');
+  } 
+});
+
+form.addEventListener('submit', function(event) {
+  if(!label.classList.contains('active')) {
+    event.preventDefault()
+    label.classList.add('error');
+    alert('Ви маєте погодитися із правилами!');
+  } else {
+    label.classList.remove('error');
+  }
+});
