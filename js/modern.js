@@ -34,3 +34,43 @@ const galleryThumbs = new Swiper('.gallery-thumbs', {
       swiper: galleryThumbs
     }
   });
+//================================================================================================================================================
+  //-----------------TEXT---------------\
+  const swiperProject = new Swiper('.swiper-project', {
+
+    loop: true,
+    speed: 1500,
+    slidesPerView: 3, // количесвто слайдов 
+    slidesPerGroup: 1, // колчиство пролистываемых слайдов
+    spaceBetween: 30,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    autoplay: {
+      delay: 1500, // пауза между прокруткой
+      disableOnInteraction: true, //отключить после ручного переключания
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      120: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
+  });
